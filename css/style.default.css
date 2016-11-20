@@ -177,6 +177,10 @@ p.lead {
   max-width: 50px;
   max-height: 50px;
 }
+.custom-molecule-icon{
+  max-width: 100px;
+  max-height:100px;
+}
 /*
 =====================
 INTRO
