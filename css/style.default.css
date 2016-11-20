@@ -32,7 +32,7 @@ NAVBAR
   border-top: solid 3px transparent;
 }
 .navbar ul.nav > li > a:hover {
-  border-top: solid 3px #6aae7a;
+  border-top: solid 3px #2196F3;
 }
 @media (max-width: 767px) {
   .navbar ul.nav > li > a:hover {
