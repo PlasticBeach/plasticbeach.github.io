@@ -180,15 +180,15 @@
                             </div>
 
                             <div class="col-md-4" data-animate="fadeInUp">
-                                <div class="icon text-icon" title="here's some text, hope you enjoy it">
+                                <div class="icon text-icon" title="BPF is so toxic, it's been banned from all consumer products. However, it can still be found in many paints, coatings, and resins, so it still finds its way into the ocean through chemical waste runoff. Environmental Health Perspectives conducted a study comparing the impacts of BPA, BPF, and BPS, and found that overall, BPF was the most toxic, causing the most severe organ failure and cancer development in test subjects.">
                                     <img src="img/Bisphenol_S.png" alt="" class="custom-molecule-icon">
                                 </div>
-                                <h3 class="heading">BPS Molecule</h3>
-                                <p>Bisphenol-S</p>
+                                <h3 class="heading">BPF Molecule</h3>
+                                <p>Bisphenol-F is an aromatic organic compound, most commonly found in plastics and epoxy resins. It's been linked to liver and oral toxicity.</p>
                             </div>
 
                             <div class="col-md-4" data-animate="fadeInUp">
-                                <div class="icon" id="ocean-currents-icon">
+                                <div class="icon text-icon" title="Ocean currents are primarily molded by the Coriolis effect, winds, salinity, and many other variables. In the northern hemisphere, currents rotate clockwise while their southern hemisphere counterparts rotate counterclockwise." id="ocean-currents-icon">
                                     <img src="img/Bisphenol_F.png" alt="" class="custom-molecule-icon">
                                 </div>
                                 <h3 class="heading">Ocean Currents</h3>
@@ -234,7 +234,7 @@
                                         <h3><br />Global Perspective</h3>
                                     </div>
                                     <div class = "col-md-6" id="person-col" style = "position: relative;">
-                                        <p   data-animate="fadeInUp"><img src="img/flat_people.gif" alt="" class="img-circle img-responsive ondra-michal"></p>
+                                        <p   data-animate="fadeInUp"><img src="img/flat_people.gif" alt="" class="img-circle img-responsive ondra-michal" id="person" onmouseover="this.src='img/plastic-input.jpg'" onmouseout="this.src='img/flat_people.gif'" ></p>
                                         <h3><br />Individual Perspective</h3>
                                     </div>
                                 </div>
@@ -524,6 +524,19 @@ $("#earth").mouseover(function(){
   $("#person-col").css("z-index", "5");
 
 })
+
+$("#person").mouseover(function(){
+  $("#person").removeClass("img-circle").removeClass("ondra-michal").removeClass("img-responsive").addClass("mypic");
+  $("#person-col").css("z-index", "10");
+  $("#earth-col").css("z-index", "5");
+  $("#person").css("margin-left", "-400px");
+})
+
+$("#person").mouseout(function(){
+  $("#person").addClass("img-circle").addClass("ondra-michal").addClass("img-reponsive").removeClass("mypic")
+  $("#person").css("margin-left", "0px");
+})
+
 $("#earth").mouseout(function(){
   $("#earth").addClass("img-circle").addClass("ondra-michal").addClass("img-reponsive").removeClass("mypic")
 })
