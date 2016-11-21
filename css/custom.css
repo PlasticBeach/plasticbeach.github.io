@@ -1,1 +1,6 @@
 /* your styles go here */
+
+.tooltip-inner {
+	font: bold 16px "Helvetica Neue", Sans-Serif;
+	background-color: #1976D2;
+}
