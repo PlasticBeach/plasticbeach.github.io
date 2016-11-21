@@ -113,7 +113,7 @@
                         <div class="row">
 
                             <h1 data-animate="fadeInDown" style = "font-size:400%">Trash Doesn't Disappear</h1> <!--trash doesn't disappear it's not magic-->
-                            <h2 data-animate="fadeInUp" style = "color:#EEEEEE;font-size:300%;">It's Not Magic</h2>
+                            <h1 data-animate="fadeInUp" style = "color:#EEEEEE;font-size:300%;">It's Not Magic</h1>
                             <div class="col-md-6 col-md-offset-3" data-animate="fadeInUp"> <!-- don't remove this or website dies-->
                             </div>
 
@@ -227,7 +227,7 @@
                                 <div class = "row">
                                     <div class = "col-md-6">
                                         <p data-animate="fadeInUp"><img src="img/rotate_earth.gif"
-                                            onmouseover="this.src='img/plasticwaste.jpg'" 
+                                            onmouseover="this.src='img/plasticwaste.png'" 
                                             onmouseout="this.src='img/rotate_earth.gif'" 
                                             alt="" id = "earth" class="img-circle img-responsive ondra-michal"></p>
                                         <h3><br />Global Perspective</h3>
@@ -430,9 +430,9 @@ _________________________________________________________ -->
                     <div class="row">
 
                         <div class="col-sm-6">
-
+                            <p style="text-align:left; color: white;">Sources Cited</p>
                             <p class="social">
-                                <a href="#" class="external facebook" data-animate-hover="shake" data-animate="fadeInUp">
+                                <a href="https://drive.google.com/open?id=1CXqx2d7j9edsLhUWXT28oKdo0el5JLZ39c5OmcasREA" class="external facebook" data-animate-hover="shake" data-animate="fadeInUp">
                                     <img src="img/MLA_icon.png" alt="" class="custom-icon img-circle img-responsive">
                                 <a href="#" class="external instagram" data-animate-hover="shake" data-animate="fadeInUp">
                                     <img src="img/Daniel.png" alt="" class="custom-icon img-circle img-responsive"></a>
@@ -487,9 +487,9 @@ _________________________________________________________ -->
 </script>
 <script>
 $("#earth").mouseover(function(){
-  $("#earth").removeClass("img-circle").removeClass("ondra-michal")
+  $("#earth").removeClass("img-circle").removeClass("ondra-michal").removeClass("img-responsive").addClass("mypic")
 })
 $("#earth").mouseout(function(){
-  $("#earth").addClass("img-circle").addClass("ondra-michal")
+  $("#earth").addClass("img-circle").addClass("ondra-michal").addClass("img-reponsive").removeClass("mypic")
 })
 </script>

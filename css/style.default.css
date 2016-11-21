@@ -173,6 +173,7 @@ p.lead {
 .ondra-michal {
   max-width: 300px;
 }
+
 .custom-icon {
   max-width: 50px;
   max-height: 50px;
@@ -319,7 +320,11 @@ earth css
 =====================
 
 */
-
+.mypic {
+  width:600px;
+  position:relative;
+  z-index:100;
+}  
 
 
 /*
