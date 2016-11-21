@@ -5,3 +5,13 @@
 	background-color: #1976D2;
 	max-width:500px;
 }
+
+.mypic {
+	position: relative;
+	z-index: 10000;
+}
+
+#person-col:hover::after {
+	content: url(img/plasticwaste.png);
+	display: block;
+}

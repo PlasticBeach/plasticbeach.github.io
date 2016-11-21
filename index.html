@@ -43,6 +43,8 @@
         <!-- Mordernizr -->
         <script src="js/modernizr-2.6.2.min.js"></script>
 
+        
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" rel="stylesheet">
         <!-- Responsivity for older IE -->
         <!--[if lt IE 9]>
         <script src="js/respond.min.js"></script>
@@ -225,14 +227,13 @@
                                 <p class="text-large text-thin"  data-animate="fadeInUp">Filler Text Here </p>
                                 <p class="text-large text-thin margin-bottom"  data-animate="fadeInUp">Hover Over Each For More Information</p>
                                 <div class = "row">
-                                    <div class = "col-md-6">
-                                        <p data-animate="fadeInUp"><img src="img/rotate_earth.gif"
-                                            onmouseover="this.src='img/plasticwaste.png'" 
+                                    <div class = "col-md-6" id="earth-col" style = "position: relative; z-index: 10;">
+                                        <p data-animate="fadeInUp"><img src="img/rotate_earth.gif" onmouseover="this.src='img/plasticwaste.png'" 
                                             onmouseout="this.src='img/rotate_earth.gif'" 
                                             alt="" id = "earth" class="img-circle img-responsive ondra-michal"></p>
                                         <h3><br />Global Perspective</h3>
                                     </div>
-                                    <div class = "col-md-6">
+                                    <div class = "col-md-6" id="person-col" style = "position: relative; z-index: 5;">
                                         <p   data-animate="fadeInUp"><img src="img/flat_people.gif" alt="" class="img-circle img-responsive ondra-michal"></p>
                                         <h3><br />Individual Perspective</h3>
                                     </div>
@@ -486,6 +487,8 @@ _________________________________________________________ -->
         <script src="js/jquery-1.11.0.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
 
         <!-- waypoints for scroll spy -->
         <script src="js/waypoints.min.js"></script>
@@ -498,7 +501,7 @@ _________________________________________________________ -->
 
         <!-- main js file -->
 
-        <script src="js/front.js"></script>        
+        <script src="js/front.js"></script>      
 
     </body>
 </html>
@@ -508,10 +511,20 @@ _________________________________________________________ -->
     $(".icon").tooltip();
 </script>
 <script>
+    $("#person-col").tooltip( {
+        content: function() {
+            console.log("is this run?");
+            return '<img src=img/plasticwaste.png></img>';
+        }
+    });
+
 $("#earth").mouseover(function(){
-  $("#earth").removeClass("img-circle").removeClass("ondra-michal").removeClass("img-responsive").addClass("mypic")
+  $("#earth").removeClass("img-circle").removeClass("ondra-michal").removeClass("img-responsive").addClass("mypic");
+  $("#eartH").css("z-index", "10000");
+
 })
 $("#earth").mouseout(function(){
   $("#earth").addClass("img-circle").addClass("ondra-michal").addClass("img-reponsive").removeClass("mypic")
 })
+
 </script>
