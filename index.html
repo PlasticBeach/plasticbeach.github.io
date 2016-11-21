@@ -226,7 +226,10 @@
                                 <p class="text-large text-thin margin-bottom"  data-animate="fadeInUp">Hover Over Each For More Information</p>
                                 <div class = "row">
                                     <div class = "col-md-6">
-                                        <p   data-animate="fadeInUp"><img src="img/rotate_earth.gif" alt="" class="img-circle img-responsive ondra-michal"></p>
+                                        <p data-animate="fadeInUp"><img src="img/rotate_earth.gif"
+                                            onmouseover="this.src='img/plasticwaste.jpg'" 
+                                            onmouseout="this.src='img/rotate_earth.gif'" 
+                                            alt="" id = "earth" class="img-circle img-responsive ondra-michal"></p>
                                         <h3><br />Global Perspective</h3>
                                     </div>
                                     <div class = "col-md-6">
@@ -481,4 +484,12 @@ _________________________________________________________ -->
 
 <script>
     $(".icon").tooltip();
+</script>
+<script>
+$("#earth").mouseover(function(){
+  $("#earth").removeClass("img-circle").removeClass("ondra-michal")
+})
+$("#earth").mouseout(function(){
+  $("#earth").addClass("img-circle").addClass("ondra-michal")
+})
 </script>
