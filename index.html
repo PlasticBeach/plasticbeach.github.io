@@ -77,7 +77,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand scrollTo" href="#intro">Mondal / Li / <small>Trent</small></a>
+                    <a class="navbar-brand scrollTo" href="#intro">Mondal / Li / <small>Harvey</small></a>
                 </div>
 
                 <div class="navbar-collapse collapse" id="navigation">
@@ -227,13 +227,13 @@
                                 <p class="text-large text-thin"  data-animate="fadeInUp">The Millions of Tons of Plastic All Come From Somewhere...</p>
                                 <p class="text-large text-thin margin-bottom"  data-animate="fadeInUp">Hover Over Each For More Information</p>
                                 <div class = "row">
-                                    <div class = "col-md-6" id="earth-col" style = "position: relative; z-index: 10;">
+                                    <div class = "col-md-6" id="earth-col" style = "position: relative;">
                                         <p data-animate="fadeInUp"><img src="img/rotate_earth.gif" onmouseover="this.src='img/plasticwaste.png'" 
                                             onmouseout="this.src='img/rotate_earth.gif'" 
                                             alt="" id = "earth" class="img-circle img-responsive ondra-michal"></p>
                                         <h3><br />Global Perspective</h3>
                                     </div>
-                                    <div class = "col-md-6" id="person-col" style = "position: relative; z-index: 5;">
+                                    <div class = "col-md-6" id="person-col" style = "position: relative;">
                                         <p   data-animate="fadeInUp"><img src="img/flat_people.gif" alt="" class="img-circle img-responsive ondra-michal"></p>
                                         <h3><br />Individual Perspective</h3>
                                     </div>
@@ -520,7 +520,8 @@ _________________________________________________________ -->
 
 $("#earth").mouseover(function(){
   $("#earth").removeClass("img-circle").removeClass("ondra-michal").removeClass("img-responsive").addClass("mypic");
-  $("#eartH").css("z-index", "10000");
+  $("#earth-col").css("z-index", "10");
+  $("#person-col").css("z-index", "5");
 
 })
 $("#earth").mouseout(function(){
