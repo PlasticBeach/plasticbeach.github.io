@@ -228,13 +228,12 @@
                                 <p class="text-large text-thin margin-bottom"  data-animate="fadeInUp">Hover Over Each For More Information</p>
                                 <div class = "row">
                                     <div class = "col-md-6" id="earth-col" style = "position: relative;">
-                                        <p data-animate="fadeInUp"><img src="img/rotate_earth.gif" onmouseover="this.src='img/plasticwaste.png'" 
-                                            onmouseout="this.src='img/rotate_earth.gif'" 
+                                        <p data-animate="fadeInUp"><img src="img/rotate_earth.gif" 
                                             alt="" id = "earth" class="img-circle img-responsive ondra-michal"></p>
                                         <h3><br />Global Perspective</h3>
                                     </div>
                                     <div class = "col-md-6" id="person-col" style = "position: relative;" title="99.5 million metric tons of plastic waste are produced by individuals living near coasts, rather than through industrial processes">
-                                        <p   data-animate="fadeInUp"><img src="img/flat_people.gif" alt="" class="img-circle img-responsive ondra-michal" id="person" onmouseover="this.src='img/plastic-input.jpg'" onmouseout="this.src='img/flat_people.gif'" ></p>
+                                        <p   data-animate="fadeInUp"><img src="img/flat_people.gif" alt="" class="img-circle img-responsive ondra-michal" id="person"></p>
                                         <h3><br />Individual Perspective</h3>
                                     </div>
                                 </div>
@@ -526,7 +525,7 @@ $("#earth").mouseover(function(){
   $("#earth").removeClass("img-circle").removeClass("ondra-michal").removeClass("img-responsive").addClass("mypic");
   $("#earth-col").css("z-index", "10");
   $("#person-col").css("z-index", "5");
-
+  $("#earth").attr("src", "img/plasticwaste.png");
 })
 
 $("#person").mouseover(function(){
@@ -534,15 +533,18 @@ $("#person").mouseover(function(){
   $("#person-col").css("z-index", "10");
   $("#earth-col").css("z-index", "5");
   $("#person").css("margin-left", "-400px");
+  $("#person").attr("src", "img/plastic-input.jpg");
 })
 
 $("#person").mouseout(function(){
   $("#person").addClass("img-circle").addClass("ondra-michal").addClass("img-reponsive").removeClass("mypic")
   $("#person").css("margin-left", "0px");
+  $("#person").attr("src", "img/flat_people.gif");
 })
 
 $("#earth").mouseout(function(){
   $("#earth").addClass("img-circle").addClass("ondra-michal").addClass("img-reponsive").removeClass("mypic")
+  $("#earth").attr("src", "img/rotate_earth.gif");
 })
 
 </script>
