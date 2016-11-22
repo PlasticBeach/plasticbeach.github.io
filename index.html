@@ -522,29 +522,33 @@ _________________________________________________________ -->
 <script>
 
 $("#earth").mouseover(function(){
+    $("#earth").attr("src", "img/plasticwaste.png");
   $("#earth").removeClass("img-circle").removeClass("ondra-michal").removeClass("img-responsive").addClass("mypic");
   $("#earth-col").css("z-index", "10");
   $("#person-col").css("z-index", "5");
-  $("#earth").attr("src", "img/plasticwaste.png");
+  
 })
 
 $("#person").mouseover(function(){
+    $("#person").attr("src", "img/plastic-input.jpg");
   $("#person").removeClass("img-circle").removeClass("ondra-michal").removeClass("img-responsive").addClass("mypic");
   $("#person-col").css("z-index", "10");
   $("#earth-col").css("z-index", "5");
   $("#person").css("margin-left", "-400px");
-  $("#person").attr("src", "img/plastic-input.jpg");
+  
 })
 
 $("#person").mouseout(function(){
+    $("#person").attr("src", "img/flat_people.gif");
   $("#person").addClass("img-circle").addClass("ondra-michal").addClass("img-reponsive").removeClass("mypic")
   $("#person").css("margin-left", "0px");
-  $("#person").attr("src", "img/flat_people.gif");
+  
 })
 
 $("#earth").mouseout(function(){
+    $("#earth").attr("src", "img/rotate_earth.gif");
   $("#earth").addClass("img-circle").addClass("ondra-michal").addClass("img-reponsive").removeClass("mypic")
-  $("#earth").attr("src", "img/rotate_earth.gif");
+  
 })
 
 </script>
