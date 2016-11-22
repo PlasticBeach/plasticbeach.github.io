@@ -233,7 +233,7 @@
                                             alt="" id = "earth" class="img-circle img-responsive ondra-michal"></p>
                                         <h3><br />Global Perspective</h3>
                                     </div>
-                                    <div class = "col-md-6" id="person-col" style = "position: relative;">
+                                    <div class = "col-md-6" id="person-col" style = "position: relative;" title="99.5 million metric tons of plastic waste are produced by individuals living near coasts, rather than through industrial processes">
                                         <p   data-animate="fadeInUp"><img src="img/flat_people.gif" alt="" class="img-circle img-responsive ondra-michal" id="person" onmouseover="this.src='img/plastic-input.jpg'" onmouseout="this.src='img/flat_people.gif'" ></p>
                                         <h3><br />Individual Perspective</h3>
                                     </div>
@@ -518,14 +518,9 @@ _________________________________________________________ -->
 
 <script>
     $(".icon").tooltip();
+    $("#person-col").tooltip();
 </script>
 <script>
-    $("#person-col").tooltip( {
-        content: function() {
-            console.log("is this run?");
-            return '<img src=img/plasticwaste.png></img>';
-        }
-    });
 
 $("#earth").mouseover(function(){
   $("#earth").removeClass("img-circle").removeClass("ondra-michal").removeClass("img-responsive").addClass("mypic");
